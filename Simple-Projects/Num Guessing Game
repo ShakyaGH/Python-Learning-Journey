@@ -1,1 +1,17 @@
-
+while True :
+    import random
+    secret_num = random.randint(1,100)
+    print("We aree going to do a number guessing game")
+    for i in range(0,11,1):
+        guess_num = int(input("Enter the number :"))
+        if guess_num > secret_num:
+            print("higher,Try Again")
+        elif guess_num < secret_num:
+            print("Lower,Try again")
+        elif guess_num == secret_num :
+            print("You guessed the number correctly: ",secret_num)
+            break   
+        if i == 10 :
+            print("You used all attempts. The correct number is",secret_num)
+            break
+    
